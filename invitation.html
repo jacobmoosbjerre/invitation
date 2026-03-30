@@ -2,7 +2,7 @@
 <html lang="da">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
 <title>Jacob · XXX</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
@@ -280,7 +280,7 @@ body::after {
    INTRO
 ───────────────────────────────────────── */
 .intro {
-  padding: 120px 32px 100px;
+  padding: 100px 32px 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -876,6 +876,77 @@ footer {
   50% { box-shadow: 0 2px 18px rgba(140,106,40,0.45); }
 }
 .env-seal { animation: sealPulse 2.5s ease-in-out infinite; }
+
+
+/* ─────────────────────────────────────────
+   MOBILE FIRST — iPhone optimisation
+───────────────────────────────────────── */
+@media (max-width: 640px) {
+
+  /* Envelope */
+  .env-wrap { width: 88vw; }
+  .env-prompt { font-size: 9px; }
+
+  /* Hero */
+  .hero-inner { padding: 80px 24px; gap: 0; }
+  .hero-rule-top { top: 40px; }
+  .hero-rule-bottom { bottom: 40px; }
+  .portrait-wrap { width: 160px; height: 160px; margin-bottom: 36px; }
+  .portrait { width: 160px !important; height: 160px !important; }
+  .portrait-frame { inset: -12px; }
+  .portrait-frame-2 { inset: -22px; }
+  .hero-eyebrow { margin-bottom: 36px; font-size: 8px; }
+  .hero-name { font-size: clamp(30px, 10vw, 52px) !important; letter-spacing: 0.10em !important; margin-bottom: 12px; }
+  .hero-sub { font-size: clamp(17px, 4.5vw, 22px) !important; margin-bottom: 32px; }
+  .hero-date-wrap { margin-bottom: 36px; gap: 16px; }
+  .hero-date { font-size: 10px; letter-spacing: 0.25em; }
+  .hero-date-line { width: 32px; }
+
+  /* Intro */
+  .intro { padding: 72px 24px 64px; }
+  .intro-body { font-size: 16px; line-height: 1.75; }
+
+  /* Program */
+  .program { padding: 0 20px 80px; }
+  .program-header { margin-bottom: 48px; flex-direction: column; align-items: flex-start; gap: 8px; }
+  .program-date-aside { text-align: left; }
+  .event-row {
+    grid-template-columns: 56px 1fr;
+    gap: 16px 20px;
+    padding: 28px 0;
+  }
+  .event-tag { grid-column: 2; justify-self: start; margin-top: 10px; }
+  .event-time { font-size: 15px; }
+  .event-title { font-size: 20px; }
+  .event-desc { font-size: 14px; line-height: 1.75; }
+
+  /* Atmosphere */
+  .atmosphere { padding: 56px 24px; gap: 28px; }
+  .atm-divider { display: none; }
+  .atm-glyph { font-size: 26px; }
+  .atm-label { font-size: 8px; }
+
+  /* Details */
+  .details { padding: 64px 20px !important; grid-template-columns: 1fr !important; gap: 2px; }
+  .detail-block { padding: 36px 28px; }
+  .detail-title { font-size: 22px; }
+  .detail-body { font-size: 14px; }
+
+  /* Practical */
+  .practical { padding: 0 20px 72px; grid-template-columns: 1fr 1fr; }
+  .prac-card { padding: 24px 18px; }
+  .prac-value { font-size: 17px; }
+  .prac-sub { font-size: 11px; }
+
+  /* RSVP */
+  .rsvp-section { padding: 72px 24px 96px; }
+  .rsvp-title { font-size: clamp(30px, 10vw, 48px); }
+  .rsvp-body { font-size: 15px; }
+  .rsvp-contact { font-size: clamp(18px, 5.5vw, 26px); }
+
+  /* Footer */
+  footer { padding: 20px 24px; flex-direction: column; align-items: flex-start; gap: 6px; }
+}
 
 </style>
 </head>
